@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         int[] consumptions = generateRandomArray();
@@ -13,20 +15,19 @@ public class Main {
         System.out.println("Сумма трат за месяц составила - " + sum + " рублей.");
 
         System.out.println("Задание 2");
-        int max = Integer.MAX_VALUE;
-        int min = Integer.MIN_VALUE;
+        int max = consumptions[0];
+        int min = consumptions[0];
         for(int consumption : consumptions){
 
             if(consumption > max){
-                consumption = max;
+                max = consumption;
             }
             if(consumption < min){
-                consumption = min;
+                max = consumption;
             }
         }
         System.out.println("Минимальная сумма трат за день составила " + min + " рублей.");
         System.out.println("Максимальная сумма трат за день составила " + max + " рублей.");
-        // только пожалуйста не пишите в пулреквесте, что у меня ошибка в задании 2 и некорректно отображается результат - я об этом знаю, но не понимаю, где ошибка и что нужно сделать, чтобы заработало корректно.
 
         System.out.println("Задание 3");
         double meanConsumption = (double) sum / consumptions.length;
