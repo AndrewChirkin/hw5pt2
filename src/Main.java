@@ -15,15 +15,15 @@ public class Main {
         System.out.println("Сумма трат за месяц составила - " + sum + " рублей.");
 
         System.out.println("Задание 2");
-        int max = consumptions[0];
-        int min = consumptions[0];
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
         for(int consumption : consumptions){
 
             if(consumption > max){
                 max = consumption;
             }
             if(consumption < min){
-                max = consumption;
+                min = consumption;
             }
         }
         System.out.println("Минимальная сумма трат за день составила " + min + " рублей.");
